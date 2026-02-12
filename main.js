@@ -182,6 +182,13 @@ var ajax = function (url, callback) {
       }
     } catch (e) {}
   };
+	LoadLang = function (url, callback, error) {
+  // Force English to always load from jsDelivr
+  if (url.indexOf("loc/EN.js") !== -1) {
+    url = "https://cdn.jsdelivr.net/gh/ubg42/CookieClicker@main/loc/EN.js";
+  }
+  LoadScript(url, callback, error);
+};
   //httpRequest.onerror=function(e){console.log('ERROR',e);}
   if (url.indexOf("?") == -1) url += "?";
   else url += "&";
