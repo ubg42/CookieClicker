@@ -30308,7 +30308,7 @@ window.onload = function () {
 
       //LoadLang('../Cookie Clicker Localization/EN.js',function(lang){return function(){
       LoadLang(
-        "loc/EN.js?v=" + Game.version,
+        "https://cdn.jsdelivr.net/gh/ubg42/CookieClicker@main/loc/EN.js?v=" + Game.version,
         (function (lang) {
           return function () {
             locStringsFallback = locStrings;
